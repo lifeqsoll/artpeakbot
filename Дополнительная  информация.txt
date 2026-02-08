@@ -1,0 +1,16 @@
+- Вся информация с демонстрацией работы бота приложена в скриншотах.
+
+- https://t.me/artpeaknews Телеграм канал бота.
+- @ArtPeakArtbot Сам бот.
+
+- https://huggingface.co/Falconsai/nsfw_image_detection
+- https://www.youtube.com/watch?v=SL82pgy95y4
+- https://www.youtube.com/watch?v=l_bhKu5yPBc Информация про nsfw_image_detection и сама модель.
+
+-https://huggingface.co/openai/clip-vit-large-patch14
+-https://www.youtube.com/watch?v=jXD6O93Ptks Информация про сlip и сама модель.
+
+-TG создателей для свзяи: @emosensei, @uselsness, @SuperApelsins
+
+-База данных автоматически создаётся при запуске если ее нет на устройстве.
+-Зависимости - requirements.txt
