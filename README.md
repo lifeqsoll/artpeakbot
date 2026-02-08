@@ -23,3 +23,4 @@
 
 КОНТАКТЫ СОЗДАТЕЛЕЙ
 tg: @emosensei, @SuperApelsins, @uselsness
+https://t.me/ArtPeakArtbot - БОТ(работает не 24/7)
