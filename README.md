@@ -22,5 +22,5 @@
 - Так же приложены скриншоты с частью функционала бота.
 
 КОНТАКТЫ СОЗДАТЕЛЕЙ
-tg: @emosensei, @SuperApelsins, @uselsness
-https://t.me/ArtPeakArtbot - БОТ(работает не 24/7)
+- tg: @emosensei, @SuperApelsins, @uselsness
+- https://t.me/ArtPeakArtbot - БОТ(работает не 24/7)
