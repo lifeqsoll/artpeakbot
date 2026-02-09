@@ -1,4 +1,4 @@
-- Вся информация с демонстрацией работы бота приложена в скриншотах.
+- Вся информация с демонстрацией работы бота приложена в скриншотах и видео.
 
 - https://t.me/artpeaknews Телеграм канал бота.
 - @ArtPeakArtbot Сам бот.
@@ -10,7 +10,7 @@
 -https://huggingface.co/openai/clip-vit-large-patch14
 -https://www.youtube.com/watch?v=jXD6O93Ptks Информация про сlip и сама модель.
 
--TG создателей для свзяи: @emosensei, @uselsness, @SuperApelsins
 
 -База данных автоматически создаётся при запуске если ее нет на устройстве.
+
 -Зависимости - requirements.txt
