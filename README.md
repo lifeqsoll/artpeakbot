@@ -14,7 +14,7 @@
 - **Язык:** Python 3.x
 - **Библиотека:** python-telegram-bot
 - **База данных:** SQLite
-- **API:** CLip, NSFW-classfier
+- **API:** CLIP, Falconsai/nsfw_image_detection
 
 ## 📋 Информация о боте
 
