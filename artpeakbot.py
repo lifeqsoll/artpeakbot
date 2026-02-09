@@ -36,7 +36,7 @@ logging.basicConfig(
 BOT_TOKEN = "token"
 MAX_ARTS_PER_USER = 10
 MAX_HASHTAGS_PER_ART = 5
-SUPPORT_USERNAME = "supportUSERNAME"
+SUPPORT_USERNAME = "support"
 SUPPORT_USER_IDS = ["support_id's"]
 active_art_messages = {}
 
@@ -5734,7 +5734,6 @@ async def appeals_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         reply_markup=reply_markup,
         parse_mode='Markdown'
     )
-
 # ========== ЗАПУСК БОТА ==========
 
 def main():
@@ -5747,6 +5746,7 @@ def main():
     # Добавление обработчиков команд
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("deleted_arts", deleted_arts_command))
+    application.add_handler(CommandHandler("appeals", appeals_command))
     
     # Добавление обработчиков кнопок
     application.add_handler(CallbackQueryHandler(button_handler))
