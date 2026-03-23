@@ -125,14 +125,6 @@ python .\artpeakbot\main.py
 - `main.py` — точка входа, регистрация хендлеров, планировщик задач
 - `bot_handlers.py` — UI/кнопки/обработчики сообщений и команд
 - `bot_logic.py` — основная логика, SQLite, проверка изображений, модерация
-artpeakbot/
 
-├── __init__.py
-├── main.py
-├── bot_logic.py
-├── bot_handlers.py
-├── split_from_original.py
-├── README.md
-└── database.db              # создается автоматически при первом запуске
 ---
 
