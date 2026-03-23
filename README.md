@@ -43,7 +43,6 @@
 
 ### 1) Установка зависимостей
 
-В репозитории сейчас нет `requirements.txt`, поэтому зависимости ставятся вручную. Пример:
 
 ```bash
 python -m venv .venv
@@ -52,7 +51,7 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 
 pip install -U pip
-pip install python-telegram-bot pillow transformers torch
+pip install requirements.txt
 
 # Для CLIP (варианты отличаются по окружению):
 # - openai/CLIP: pip install git+https://github.com/openai/CLIP.git
@@ -68,8 +67,6 @@ pip install python-telegram-bot pillow transformers torch
 - **`BOT_TOKEN`** — токен Telegram‑бота
 - **`SUPPORT_USERNAME`** — ник поддержки (показывается пользователям)
 - **`SUPPORT_USER_IDS`** — список Telegram ID модераторов (доступ к мод‑командам и мод‑кнопкам)
-
-Важно: **не храните токен в репозитории**. Если токен уже попадал в код/публичный доступ — **сразу перевыпустите его через @BotFather**.
 
 ### 3) Запуск
 
