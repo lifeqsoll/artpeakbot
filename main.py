@@ -11,6 +11,8 @@ from telegram.ext import (
     filters,
 )
 from telegram import Update
+from telegram.request import HTTPXRequest
+from telegram.error import TimedOut, NetworkError
 
 
 logging.basicConfig(
@@ -60,7 +62,16 @@ async def _run_bot():
 
     init_db()
 
-    application = Application.builder().token(BOT_TOKEN).build()
+    # Увеличиваем таймауты HTTP-клиента Telegram API, чтобы бот не падал
+    # при кратковременных проблемах сети/провайдера.
+    request = HTTPXRequest(
+        connect_timeout=30.0,
+        read_timeout=30.0,
+        write_timeout=30.0,
+        pool_timeout=30.0,
+    )
+
+    application = Application.builder().token(BOT_TOKEN).request(request).build()
 
     # Команды
     application.add_handler(CommandHandler("start", start))
@@ -96,7 +107,24 @@ async def _run_bot():
 
     # Явный жизненный цикл. На некоторых связках Python 3.13 + PTB 22.x
     # `run_polling()` может стартовать до инициализации ExtBot.
-    await application.initialize()
+    retries = 5
+    for attempt in range(1, retries + 1):
+        try:
+            await application.initialize()
+            break
+        except (TimedOut, NetworkError) as e:
+            if attempt == retries:
+                raise
+            wait_seconds = min(5 * attempt, 20)
+            logging.warning(
+                "Сетевой таймаут при initialize (%s/%s): %s. Повтор через %s сек.",
+                attempt,
+                retries,
+                e,
+                wait_seconds,
+            )
+            await asyncio.sleep(wait_seconds)
+
     await application.start()
     await application.updater.start_polling(allowed_updates=Update.ALL_TYPES)
 
