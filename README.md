@@ -43,7 +43,6 @@
 
 ### 1) Установка зависимостей
 
-В репозитории сейчас нет `requirements.txt`, поэтому зависимости ставятся вручную. Пример:
 
 ```bash
 python -m venv .venv
@@ -52,7 +51,7 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 
 pip install -U pip
-pip install python-telegram-bot pillow transformers torch
+pip install requirements.txt
 
 # Для CLIP (варианты отличаются по окружению):
 # - openai/CLIP: pip install git+https://github.com/openai/CLIP.git
